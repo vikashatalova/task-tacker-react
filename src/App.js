@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Login from "./layots/login";
+// import MainPage from "./layots/mainPage";
+// import TodoList from "./ui/listTodo";
+import Navbar from "./ui/navbar";
+import Todo from "./ui/Todo";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Switch>
+        <Route exact path="/:edit?" component={Todo}></Route>
+        <Route path="/login" component={Login}></Route>
+        <Redirect to="/"></Redirect>
+      </Switch>
     </div>
-  );
+  )
 }
 
 export default App;

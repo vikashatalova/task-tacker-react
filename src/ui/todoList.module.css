@@ -1,0 +1,98 @@
+.todoBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.inputAddTodo {
+    /* height: 42px;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2; */
+    /* width: 500px; */
+    padding: 0 42px 0 15px;
+    background: transparent;
+    transition: all 1s;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(96, 96, 96);
+}
+
+.inputAddTodo:focus {
+    transition: all 1s;
+    width: 600px;
+    z-index: 1;
+    border-bottom: 2px solid rgb(96, 96, 96);
+}
+
+.btnAddTodo {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid rgb(96, 96, 96);
+}
+
+.dropdown {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    user-select: none;
+}
+
+.dropdown .dropdownBtn {
+    padding: 10px 20px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, .06);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+.dropdown .dropdownContent {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, .06);
+    color: #333;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.dropdown .dropdownContent .dropdownItem {
+    padding: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 30px;
+}
+
+.dropdown .dropdownContent .dropdownItem:hover {
+    background: #f4f4f4;
+}
+
+.span {
+    margin-right: 24px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    
+}
+
+.span:hover {
+    border-bottom: 1px solid rgb(96, 96, 96);
+    transition: all 1s;
+}
