@@ -19,7 +19,6 @@ const AddTodo = ({todos,setTodo}) => {
     return ( 
         <div className="container input-group d-flex justify-content-center mb-5 mt-5">
             <input 
-                // className="form-control" 
                 className={s.inputAddTodo}
                 placeholder="Enter the task" 
                 value={value} 

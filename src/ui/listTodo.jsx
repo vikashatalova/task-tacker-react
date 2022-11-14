@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import DropDown from "./dropdown";
 import s from "./todoList.module.css";
 
 
@@ -8,7 +7,6 @@ const TodoList = ({ todos, setTodo }) => {
     const [edit, setEdit] = useState(null);
     const [value, setValue] = useState("");
     const [filter, setFilter] = useState(todos);
-    const [selected, setSelected] = useState("Todo List");
     const params = useParams();
     console.log(params);
     const buttonStatus = [
@@ -70,13 +68,6 @@ const TodoList = ({ todos, setTodo }) => {
                     </span>
                 )}
                 </div>
-                {/* <div>
-                    <DropDown 
-                        selected={selected} 
-                        setSelected={setSelected} 
-                        // todoFilter={() => buttonStatus.map((b) => todoFilter(b.status))} 
-                    />
-                </div> */}
                 {filter.map(item => (
                 <div key={item.id} className={s.todoBlock}>
                         {
@@ -113,5 +104,3 @@ const TodoList = ({ todos, setTodo }) => {
  
 export default TodoList;
 
-//editTodo будет делать переадресацию на страницу с изменениями
-//close/open вынести в отдельный компонент,изменять кнопку как в избранных

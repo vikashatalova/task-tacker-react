@@ -5,11 +5,7 @@ import s from "./todoList.module.css";
 const DropDown = ({ selected, setSelected, todoFilter }) => {
     const [isActive, setIsActive] = useState(false);
     const options = ['Все', 'Открытые', 'Закрытые']
-    // const options = [
-    //     {id: 1, status: 'all', name:'Все'}, 
-    //     {id: 2, status: true, name:'Открытые'},
-    //     {id: 3, status: false, name:'Закрытые'}
-    // ]
+ 
     return ( 
         <div className={s.dropdown}>
             <div className={s.dropdownBtn} onClick={() => setIsActive(!isActive)}>
